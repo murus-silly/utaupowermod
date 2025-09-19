@@ -1,0 +1,36 @@
+{
+"name":"emptysoulpower",
+  "background": "minecraft:textures/block/red_wool.png",
+  "icon": "ut_au_power_mod:textures/icons/emptysoulicon.png",
+  "gui_display_type": "list",
+
+  "abilities":{
+
+       "emptysoul":{
+      "type": "palladium:command",
+       "hidden": false,
+       "hidden_in_bar": false,
+        "title": "Empty Soul",
+       "icon": "ut_au_power_mod:textures/icons/emptysoulicon.png",
+       "first_tick_commands": [],
+       "last_tick_commands": [],
+        "commands": [
+        "superpower remove ut_au_power_mod:all",
+        "clear @p ut_au_power_mod:emptysoul 1"
+    ],
+    "conditions":{
+      "enabling":[
+   {
+    "type": "palladium:activation",
+    "cooldown": 10,
+    "ticks": 1,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+   }
+        
+]
+    }
+    }
+}
+}

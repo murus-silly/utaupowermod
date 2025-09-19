@@ -1,0 +1,24 @@
+{ 
+  "icon": "minecraft:stick",
+  "items": [
+    "ut_au_power_mod:boneweapon",
+    "ut_au_power_mod:bigbone",
+    "ut_au_power_mod:emptysoul",
+    "ut_au_power_mod:blueeye",
+    "ut_au_power_mod:determinationessence",
+    "ut_au_power_mod:dtextractor",
+    "ut_au_power_mod:hate",
+    "ut_au_power_mod:kingtrident",
+    "ut_au_power_mod:littlebone",
+    "ut_au_power_mod:littlerobot",
+    "ut_au_power_mod:magicspear",
+    "ut_au_power_mod:pellet",
+    "ut_au_power_mod:savepoint",
+    "ut_au_power_mod:sixsouls",
+    "ut_au_power_mod:snailbook",
+    "ut_au_power_mod:soulfragment",
+    "ut_au_power_mod:voidgoop",
+    "ut_au_power_mod:wheel",
+    "ut_au_power_mod:rainbowsoul"
+  ]
+}

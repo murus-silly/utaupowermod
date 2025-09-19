@@ -1,0 +1,198 @@
+{
+  "name":"papyrus",
+  "background": "minecraft:textures/block/red_wool.png",
+  "icon": "ut_au_power_mod:textures/icons/bigboneicon.png",
+  "gui_display_type": "tree",
+
+  "abilities":{
+    "papyruspower": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:ender_eye",
+      "title": "Papyrus Power",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0, 0],
+      "description": "Through the power of the Big Bone, you are able to use the magic of Papyrus!"
+    },
+    "bone_wall": {
+      "type": "palladium:projectile",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -1],
+      "description": "Throw Multiple Bones at the enemy!",
+     "title": "Bone Throw",
+      "entity_type": "palladium:custom_projectile",
+      "inaccuracy": 15,
+      "icon": "ut_au_power_mod:textures/icons/bonewall.png",
+      "velocity": 6,
+      "entity_data": {
+        "Damage": 2,
+        "Gravity": 0.003,
+        "Appearances": [
+
+          {
+            "Type": "item",
+            "Item": "minecraft:bone"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:snowflake",
+            "Spread": 2.5
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+    "type": "palladium:activation",
+    "cooldown": 80,
+    "ticks": 20,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+          }
+        ]
+      }
+    },
+
+     "cool_dude": {
+      "type": "palladium:projectile",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -4],
+      "description": "The ultimate move of Papyrus!",
+      "entity_type": "palladium:custom_projectile",
+      "title": "Cool Dude",
+      "icon": "ut_au_power_mod:textures/icons/cooldude.png",
+      "velocity": 1,
+      "entity_data": {
+        "Damage": 20,
+        "Gravity": 0.005,
+         "Size": 1,
+        "Appearances": [
+
+          {
+            "Type": "item",
+            "Item": "minecraft:bone_block"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:snowflake",
+            "Spread": 2.5
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+    "type": "palladium:activation",
+    "cooldown": 300,
+    "ticks": 1,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+          }
+        ]
+      }
+    },
+
+     "blue_soul":{
+      "type": "palladium:command",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [-1, -2],
+      "description": "Make your enemies soul blue, slowing those around you!",
+        "title": "Your Blue NOW!",
+       "icon": "ut_au_power_mod:textures/icons/bluesoul.png",
+       "first_tick_commands": [],
+       "last_tick_commands": [],
+        "commands": [
+          "effect give @a[distance=200] minecraft:slowness 10 2 true",
+          "effect give @e[type=!minecraft:player,distance=..20] minecraft:slowness 10 2 true",
+          "effect give @a[distance=200] minecraft:glowing 10 2 true",
+          "effect give @e[type=!minecraft:player,distance=..20] minecraft:glowing 10 2 true"
+    ],
+    "conditions":{
+      "enabling":[
+   {
+    "type": "palladium:activation",
+    "cooldown": 400,
+    "ticks": 2,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+   }
+        
+]
+    }
+    },
+
+
+     "boneweapon":{
+      "type": "palladium:command",
+       "hidden": false,
+       "hidden_in_bar": false,
+        "gui_position": [0, -2],
+        "description": "Create a Weapon out of Bones!",
+        "title": "Bone Weapon",
+       "icon": "ut_au_power_mod:textures/icons/boneweapon.png",
+       "first_tick_commands": [],
+       "last_tick_commands": [],
+        "commands": [
+          "give @p ut_au_power_mod:boneweapon"
+    ],
+    "conditions":{
+      "enabling":[
+   {
+    "type": "palladium:activation",
+    "cooldown": 600,
+    "ticks": 1,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+   }
+      ]
+   
+  }
+},
+
+      "bone_walls": {
+      "type": "palladium:projectile",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -3],
+      "description": "Throw Many Bone Walls at the enemy!",
+      "entity_type": "palladium:custom_projectile",
+      "title": "Bone Walls",
+      "icon": "ut_au_power_mod:textures/icons/cooldude.png",
+      "velocity": 1,
+      "entity_data": {
+        "Damage": 3,
+        "Gravity": 0.001,
+         "Size": 1,
+        "Appearances": [
+
+          {
+            "Type": "item",
+            "Item": "minecraft:bone_block"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:snowflake",
+            "Spread": 2.5
+          }
+        ]
+      },
+      "conditions": {
+        "enabling": [
+          {
+    "type": "palladium:activation",
+    "cooldown": 300,
+    "ticks": 10,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+          }
+        ]
+      }
+    }
+}
+}
+

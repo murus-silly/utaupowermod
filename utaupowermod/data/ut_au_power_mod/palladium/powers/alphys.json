@@ -1,0 +1,6 @@
+{
+  "name":"alphys",
+  "background": "minecraft:textures/block/red_wool.png",
+  "icon": "ut_au_power_mod:textures/icons/bigboneicon.png",
+  "gui_display_type": "tree"
+}

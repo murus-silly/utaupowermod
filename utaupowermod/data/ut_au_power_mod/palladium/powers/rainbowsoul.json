@@ -1,7 +1,7 @@
 {
 "name":"rainbowsoul",
   "background": "minecraft:textures/block/red_wool.png",
-  "icon": "ut_au_power_mod:textures/icons/bigboneicon.png",
+  "icon": "ut_au_power_mod:textures/rainbowsoul.png",
   "gui_display_type": "list",
 
   "abilities":{
@@ -11,7 +11,7 @@
        "hidden": false,
        "hidden_in_bar": false,
         "title": "Asriel Dreemurr",
-       "icon": "ut_au_power_mod:textures/icons/bigboneicon.png",
+       "icon": "ut_au_power_mod:textures/rainbowsoul.png",
        "first_tick_commands": [],
        "last_tick_commands": [],
         "commands": [

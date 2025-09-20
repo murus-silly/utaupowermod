@@ -165,7 +165,7 @@
       "icon": "ut_au_power_mod:textures/icons/cooldude.png",
       "velocity": 1,
       "entity_data": {
-        "Damage": 3,
+        "Damage": 4,
         "Gravity": 0.001,
          "Size": 1,
           "Appearances": [
@@ -177,7 +177,7 @@
           {
             "Type": "particles",
             "ParticleType": "minecraft:snowflake",
-            "Spread": 2.5
+            "Spread": 1.5
           }
         ]
       },

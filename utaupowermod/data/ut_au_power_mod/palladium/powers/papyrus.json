@@ -66,19 +66,14 @@
       "velocity": 1,
       "entity_data": {
         "Damage": 20,
-        "Gravity": 0.005,
+        "Gravity": 0.02,
          "Size": 1,
         "Appearances": [
 
           {
-            "Type": "item",
-            "Item": "minecraft:bone_block"
-          },
-          {
-            "Type": "particles",
-            "ParticleType": "minecraft:snowflake",
-            "Spread": 2.5
-          }
+            "Type": "renderLayer",
+            "RenderLayer": "ut_au_power_mod:bonewallmodels"
+            }
         ]
       },
       "conditions": {
@@ -166,7 +161,7 @@
       "velocity": 1,
       "entity_data": {
         "Damage": 4,
-        "Gravity": 0.001,
+        "Gravity": 0.01,
          "Size": 1,
           "Appearances": [
 

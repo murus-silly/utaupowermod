@@ -68,12 +68,17 @@
         "Damage": 20,
         "Gravity": 0.02,
          "Size": 1,
-        "Appearances": [
+          "Appearances": [
 
           {
-            "Type": "renderLayer",
-            "RenderLayer": "ut_au_power_mod:bonewallmodels"
-            }
+            "Type": "item",
+            "Item": "minecraft:bone_block"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:snowflake",
+            "Spread": 1.5
+          }
         ]
       },
       "conditions": {
@@ -166,13 +171,13 @@
           "Appearances": [
 
           {
-            "Type": "item",
-            "Item": "minecraft:bone_block"
+            "Type": "Item",
+            "Item": "ut_au_power_mod:bonewallmodel"
           },
           {
             "Type": "particles",
             "ParticleType": "minecraft:snowflake",
-            "Spread": 1.5
+            "Spread": 0.1
           }
         ]
       },

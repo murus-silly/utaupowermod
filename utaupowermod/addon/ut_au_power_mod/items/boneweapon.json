@@ -2,5 +2,7 @@
     "type": "palladium:sword",
     "tier": "minecraft:diamond",
     "base_damage": 5,
-    "attack_speed": -2
+    "attack_speed": -2,
+    "durabilty": 20
+
   }

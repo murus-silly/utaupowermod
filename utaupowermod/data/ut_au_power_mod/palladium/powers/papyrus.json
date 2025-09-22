@@ -66,13 +66,13 @@
       "velocity": 1,
       "entity_data": {
         "Damage": 20,
-        "Gravity": 0.02,
+        "Gravity": 0.009,
          "Size": 1,
           "Appearances": [
 
           {
             "Type": "item",
-            "Item": "minecraft:bone_block"
+            "Item": "ut_au_power_mod:cooldudemodel"
           },
           {
             "Type": "particles",
@@ -85,7 +85,7 @@
         "enabling": [
           {
     "type": "palladium:activation",
-    "cooldown": 900,
+    "cooldown": 400,
     "ticks": 1,
     "key_type": "key_bind",
     "needs_empty_hand": false
@@ -162,22 +162,22 @@
       "description": "Throw Many Bone Walls at the enemy!",
       "entity_type": "palladium:custom_projectile",
       "title": "Bone Walls",
-      "icon": "ut_au_power_mod:textures/icons/cooldude.png",
+      "icon": "ut_au_power_mod:textures/icons/bonewallmodel.png",
       "velocity": 1,
       "entity_data": {
-        "Damage": 4,
-        "Gravity": 0.01,
+        "Damage": 15,
+        "Gravity": 0.005,
          "Size": 1,
           "Appearances": [
 
           {
-            "Type": "Item",
+            "Type": "item",
             "Item": "ut_au_power_mod:bonewallmodel"
           },
           {
             "Type": "particles",
             "ParticleType": "minecraft:snowflake",
-            "Spread": 0.1
+            "Spread": 3
           }
         ]
       },
@@ -186,7 +186,7 @@
           {
     "type": "palladium:activation",
     "cooldown": 300,
-    "ticks": 10,
+    "ticks": 1,
     "key_type": "key_bind",
     "needs_empty_hand": false
           }

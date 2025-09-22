@@ -41,7 +41,6 @@
           }
         ]
       },
-      "conditions": {
         "enabling": [
           {
     "type": "palladium:activation",

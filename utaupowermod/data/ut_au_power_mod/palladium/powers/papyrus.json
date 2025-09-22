@@ -5,6 +5,7 @@
   "gui_display_type": "tree",
 
   "abilities":{
+
     "papyruspower": {
       "type": "palladium:dummy",
       "icon": "minecraft:ender_eye",
@@ -13,7 +14,23 @@
       "hidden_in_bar": true,
       "gui_position": [0, 0],
       "description": "Through the power of the Big Bone, you are able to use the magic of Papyrus!"
-    },
+      },
+
+    "stat_upgrades": {
+            "type": "palladium:dummy",
+            "icon": "ut_au_power_mod:textures/icons/bonewall.png",
+            "title": "Skill tree",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "gui_position": [
+                0,
+                1
+            ],
+            "description": "This is the skill tree that will allow you to upgrade your various stats"
+        },
+
+
     "bone_wall": {
       "type": "palladium:projectile",
        "hidden": false,
@@ -41,17 +58,17 @@
           }
         ]
       },
+      "conditions": {
         "enabling": [
           {
     "type": "palladium:activation",
     "cooldown": 160,
-    "ticks": 20,
+    "ticks": 25,
     "key_type": "key_bind",
     "needs_empty_hand": false
           }
         ]
-      }
-    },
+      },
 
      "cool_dude": {
       "type": "palladium:projectile",
@@ -81,6 +98,18 @@
         ]
       },
       "conditions": {
+                "unlocking": [
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "null",
+    "ability": "ut_au_power_mod:bone_walls"
+        },
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+        ],
         "enabling": [
           {
     "type": "palladium:activation",
@@ -110,6 +139,18 @@
           "effect give @e[type=!minecraft:player,distance=..20] minecraft:glowing 10 2 true"
     ],
     "conditions":{
+          "unlocking": [
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "null",
+    "ability": "ut_au_power_mod:boneweapon"
+        },
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+    ],
       "enabling":[
    {
     "type": "palladium:activation",
@@ -139,6 +180,18 @@
           "give @p ut_au_power_mod:boneweapon"
     ],
     "conditions":{
+      "unlocking": [
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "null",
+    "ability": "ut_au_power_mod:bone_wall"
+        },
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 5,
+    "flat_levels": true
+      }
+    ],
       "enabling":[
    {
     "type": "palladium:activation",
@@ -181,6 +234,18 @@
         ]
       },
       "conditions": {
+        "unlocking": [
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "null",
+    "ability": "ut_au_power_mod:boneweapon"
+        },
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 15,
+    "flat_levels": true
+      }
+    ],
         "enabling": [
           {
     "type": "palladium:activation",
@@ -194,4 +259,4 @@
     }
 }
 }
-
+}

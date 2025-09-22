@@ -1,8 +1,6 @@
 {
     "type": "palladium:sword",
-    "tier": "minecraft:diamond",
+    "tier": "ut_au_power_mod:bone",
     "base_damage": 5,
-    "attack_speed": -2,
-    "durabilty": 20
-
+    "attack_speed": -2
   }

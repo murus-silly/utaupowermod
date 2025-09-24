@@ -1,7 +1,7 @@
 {
     "type": "palladium:default",
     "food": {
-        "nutrition": 45,
+        "nutrition": 8,
         "saturation_modifier": 2,
         "meat": false,
         "can_always_eat": true,

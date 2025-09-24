@@ -2,5 +2,648 @@
   "name":"toriel",
   "background": "minecraft:textures/block/red_wool.png",
   "icon": "ut_au_power_mod:textures/icons/bigboneicon.png",
-  "gui_display_type": "tree"
+  "persistent_data": true,
+  "gui_display_type": "tree",
+
+   "abilities":{
+
+    "torielpower": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:ender_eye",
+      "title": "Toriel Power",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0, 0],
+      "description": "Through the power of the Snail Book, you are able to use the magic of Toriel!"
+      },
+
+       "toriel_basis":{
+    "type": "palladium:damage_immunity",
+    "icon": "minecraft:potion",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "damage_sources": [
+        "minecraft:is_fire"
+    ]
+},
+
+    "stat_upgrades": {
+            "type": "palladium:dummy",
+            "icon": "minecraft:heart_of_the_sea",
+            "title": "Skill tree",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "gui_position": [0,1],
+            "description": "This is the skill tree that will allow you to upgrade your various stats",
+                  "conditions": {
+        "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "torielpower"
+},
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 3,
+    "flat_levels": true
+      }
+        ]
+        }
+      },
+
+       "toriel_health": {
+        "type": "palladium:attribute_modifier",
+         "icon": "minecraft:ender_eye",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "attribute": "minecraft:generic.max_health",
+        "amount": 4,
+        "operation": 0,
+        "uuid": "f179cc6a-ebc8-40fc-9c5e-f0f311dc1d0b"
+       },
+
+        "toriel_health2": {
+        "type": "palladium:attribute_modifier",
+         "icon": "ut_au_power_mod:textures/icons/hearticon.png",
+        "hidden": false,
+        "hidden_in_bar": true,
+         "gui_position": [1.5,2.5],
+        "description": "Due to your training, your max health has increased!",
+        "attribute": "minecraft:generic.max_health",
+        "amount": 6,
+        "operation": 0,
+        "uuid": "352bec81-ac7f-4f93-ae7a-fa93fea00781",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "stat_upgrades"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 5,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_health3": {
+        "type": "palladium:attribute_modifier",
+         "icon": "ut_au_power_mod:textures/icons/hearticon.png",
+        "hidden": false,
+        "hidden_in_bar": true,
+         "gui_position": [2.5,2.5],
+        "description": "Due to your training, your max health has increased even more!",
+        "attribute": "minecraft:generic.max_health",
+        "amount": 6,
+        "operation": 0,
+        "uuid": "a61654b8-b71e-4b16-b2ff-88c560a35b18",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_health2"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_health4": {
+        "type": "palladium:attribute_modifier",
+         "icon": "ut_au_power_mod:textures/icons/hearticon.png",
+        "hidden": false,
+        "hidden_in_bar": true,
+         "gui_position": [3.5,2.5],
+        "description": "Due to your training, your max health has fully increased!",
+        "attribute": "minecraft:generic.max_health",
+        "amount": 10,
+        "operation": 0,
+        "uuid": "767af1af-a7d3-47c1-8bf1-a6f85b0e6215",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_health3"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 15,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+       "toriel_attack": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:wooden_sword",
+        "hidden": false,
+        "hidden_in_bar": true,
+         "gui_position": [1,3.5],
+        "description": "Due to your training, your attack has increased!",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 1.2,
+        "operation": 0,
+        "uuid": "3059aba6-f0cf-4334-ab81-ead1c962cac0",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "stat_upgrades"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 5,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+       "toriel_attack2": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:golden_sword",
+        "hidden": false,
+        "hidden_in_bar": true,
+         "gui_position": [2,3.5],
+        "description": "Due to your training, your attack has increased more!",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 1.3,
+        "operation": 0,
+        "uuid": "351de1fa-1c23-4cca-8a82-c247f05235b3",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_attack"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_attack3": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:iron_sword",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [3,3.5],
+        "description": "Due to your training, your attack has increased even more!",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 2.5,
+        "operation": 0,
+        "uuid": "71bd7aa8-eec9-4df8-a3c7-8347b2315907",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_attack2"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 15,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+
+        "toriel_armour": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:leather_chestplate",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-1.5,2.5],
+        "description": "Due to your training, your armour has increased!",
+        "attribute": "minecraft:generic.armor",
+        "amount": 5,
+        "operation": 0,
+        "uuid": "e78602cf-e68a-450d-9ae4-fd2f90b41f63",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "stat_upgrades"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 5,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+       "toriel_armour2": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:golden_chestplate",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-2.5,2.5],
+        "description": "Due to your training, your armour has increased more!",
+        "attribute": "minecraft:generic.armor",
+        "amount": 5,
+        "operation": 0,
+        "uuid": "1d7cc6e0-5d20-4b2b-afbe-dbb471b40f3b",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_armour"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_armour3": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:iron_chestplate",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-3.5,2.5],
+        "description": "Due to your training, your armour has fully increased!",
+        "attribute": "minecraft:generic.armor",
+        "amount": 5,
+        "operation": 0,
+        "uuid": "616058d1-b9d6-4aaa-bce7-f1340bea86c9",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_armour2"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 15,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_speed": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:leather_boots",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-1,3.5],
+        "description": "Due to your training, your speed has increased!",
+        "attribute": "minecraft:generic.movement_speed",
+        "amount": 0.07,
+        "operation": 0,
+        "uuid": "02c8097e-a8aa-4b8d-a2d0-44cc2ad0e157",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "stat_upgrades"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 5,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_speed2": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:golden_boots",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-2,3.5],
+        "description": "Due to your training, your speed has increased more!",
+        "attribute": "minecraft:generic.movement_speed",
+        "amount": 0.08,
+        "operation": 0,
+        "uuid": "8081edc9-a346-4a05-8e67-fd6cabd70a9e",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_speed"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_speed3": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:iron_boots",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-3,3.5],
+        "description": "Due to your training, your speed has increased even more!",
+        "attribute": "minecraft:generic.movement_speed",
+        "amount": 0.05,
+        "operation": 0,
+        "uuid": "8081edc9-a346-4a05-8e67-fd6cabd70a9e",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_speed2"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+               "toriel_regen": {
+        "type": "palladium:healing",
+          "icon": "minecraft:golden_apple",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [1.5,1.5],
+        "description": "Due to your training, your regen has increased!",
+        "frequency": 90,
+        "amount": 1,
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_health2"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+               "toriel_regen2": {
+        "type": "palladium:healing",
+          "icon": "minecraft:enchanted_golden_apple",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [2.5,1.5],
+        "description": "Due to your training, your regen has fully increased!",
+       "frequency": 90,
+        "amount": 1,
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_regen"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_toughness": {
+        "type": "palladium:attribute_modifier",
+         "icon": "minecraft:diamond_chestplate",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-1.5,1.5],
+        "description": "Due to your training, your toughness has increased!",
+        "attribute": "minecraft:generic.armor_toughness",
+        "amount": 4,
+        "operation": 0,
+        "uuid": "1f2540fa-9c70-4c26-a0e3-57dfff86759b",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_armour"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 10,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+        "toriel_toughness2": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:netherite_chestplate",
+        "hidden": false,
+        "hidden_in_bar": true,
+        "gui_position": [-2.5,1.5],
+        "description": "Due to your training, your toughness has increased even more!",
+        "attribute": "minecraft:generic.armor_toughness",
+        "amount": 4,
+        "operation": 0,
+        "uuid": "e5689a73-c480-409e-90dd-3ad13d442f12",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "toriel_toughness"
+            },
+                          {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+          ]
+        }
+       },
+
+       "flame_throw": {
+      "type": "palladium:projectile",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -1],
+      "description": "Throw Fireballs at the enemy!",
+     "title": "Flame Throw",
+      "entity_type": "palladium:custom_projectile",
+      "inaccuracy": 12,
+      "icon": "minecraft:fire_charge",
+      "velocity": 2,
+      "entity_data": {
+        "Damage": 4,
+        "Gravity": 0.002,
+        "Appearances": [
+
+          {
+            "Type": "item",
+            "Item": "minecraft:fire_charge"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:flame",
+            "Spread": 0.1
+          }
+        ]
+      },
+      "conditions": {
+        "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "torielpower"
+}
+        ],
+        "enabling": [
+          {
+    "type": "palladium:activation",
+    "cooldown": 180,
+    "ticks": 15,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+          }
+        ]
+      }
+    },
+
+       "fire_hands":{
+    "type": "palladium:fire_aspect",
+    "icon": "minecraft:flint_and_steel",
+    "title": "Fire Hands",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "gui_position": [0, -2],
+    "description": "Using the power of your magic, you can set your hands ablaze, burning your enemies on contact!",
+    "time": 5,
+    "should_stack_time": false,
+    "max_time": 5,
+
+     "conditions": {
+        "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "flame_throw"
+},
+
+             {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 15,
+    "flat_levels": true
+      }
+
+        ],
+        "enabling": [
+            {
+    "type": "palladium:toggle",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+            }
+        ]
+}
+
+         },
+         
+        "big_flame_throw": {
+      "type": "palladium:projectile",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -3],
+      "description": "Throw a Big Fireball at the enemy!",
+     "title": "Explosive Fireball",
+      "entity_type": "palladium:custom_projectile",
+      "inaccuracy": 1,
+      "icon": "minecraft:fire_charge",
+      "velocity": 0.8,
+      "entity_data": {
+       "Damage": 10,
+        "Gravity": 0.003,
+        "Size": 0.5,
+        "Lifetime": 1200,
+        "DieOnEntityHit": false,
+        "DieOnBlockHit": true,
+        "ExplosionRadius": 3,
+        "ExplosionCausesFire": true,
+        "ExplosionBlockInteraction": "destroy",
+        "Appearances": [
+          
+          {
+            "Type": "item",
+            "Item": "minecraft:firework_star"
+          },
+          {
+            "Type": "particles",
+            "ParticleType": "minecraft:flame",
+            "Spread": 0.1
+          }
+        ]
+      },
+      "conditions": {
+        "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "fire_hands"
+},
+             {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+        ],
+        "enabling": [
+          {
+    "type": "palladium:activation",
+    "cooldown": 3.60,
+    "ticks": 1,
+    "key_type": "key_bind",
+    "needs_empty_hand": false
+          }
+        ]
+      }
+    }
+
+
+}
 }

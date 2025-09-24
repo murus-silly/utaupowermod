@@ -328,7 +328,7 @@
         "gui_position": [-1,3.5],
         "description": "Due to your training, your speed has increased!",
         "attribute": "minecraft:generic.movement_speed",
-        "amount": 0.1,
+        "amount": 0.05,
         "operation": 0,
         "uuid": "02c8097e-a8aa-4b8d-a2d0-44cc2ad0e157",
           "conditions": {
@@ -355,7 +355,7 @@
         "gui_position": [-2,3.5],
         "description": "Due to your training, your speed has increased more!",
         "attribute": "minecraft:generic.movement_speed",
-        "amount": 0.1,
+        "amount": 0.05,
         "operation": 0,
         "uuid": "8081edc9-a346-4a05-8e67-fd6cabd70a9e",
           "conditions": {
@@ -382,7 +382,7 @@
         "gui_position": [-3,3.5],
         "description": "Due to your training, your speed has increased even more!",
         "attribute": "minecraft:generic.movement_speed",
-        "amount": 0.1,
+        "amount": 0.05,
         "operation": 0,
         "uuid": "8081edc9-a346-4a05-8e67-fd6cabd70a9e",
           "conditions": {
@@ -518,7 +518,7 @@
       "icon": "ut_au_power_mod:textures/icons/bonewall.png",
       "velocity": 6,
       "entity_data": {
-        "Damage": 2,
+        "Damage": 3,
         "Gravity": 0.003,
         "Appearances": [
 
@@ -562,7 +562,7 @@
       "entity_type": "palladium:custom_projectile",
       "title": "Cool Dude",
       "icon": "ut_au_power_mod:textures/icons/cooldude.png",
-      "velocity": 1,
+      "velocity": 1.5,
       "entity_data": {
         "Damage": 20,
         "Gravity": 0.009,
@@ -698,7 +698,7 @@
       "entity_type": "palladium:custom_projectile",
       "title": "Bone Walls",
       "icon": "ut_au_power_mod:textures/icons/bonewallmodel.png",
-      "velocity": 1,
+      "velocity": 2,
       "entity_data": {
         "Damage": 15,
         "Gravity": 0.005,

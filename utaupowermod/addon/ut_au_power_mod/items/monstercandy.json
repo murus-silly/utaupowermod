@@ -1,0 +1,10 @@
+{
+    "type": "palladium:default",
+    "food": {
+        "nutrition": 10,
+        "saturation_modifier": 1,
+        "meat": false,
+        "can_always_eat": true,
+        "fast": false
+}
+}

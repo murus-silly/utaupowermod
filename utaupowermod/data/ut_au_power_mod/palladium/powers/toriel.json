@@ -28,7 +28,8 @@
     "gui_position": "null",
     "description": "null",
     "damage_sources": [
-        "minecraft:is_fire"
+        "minecraft:is_fire",
+        "minecraft:is_explosion"
     ]
 },
 
@@ -567,7 +568,7 @@
 
              {  
     "type": "palladium:experience_level_buyable",
-    "xp_level": 15,
+    "xp_level": 10,
     "flat_levels": true
       }
 
@@ -590,20 +591,20 @@
        "hidden": false,
        "hidden_in_bar": false,
        "gui_position": [0, -3],
-      "description": "Throw a Big Fireball at the enemy!",
+      "description": "Throw a Explosive Fireball at the enemy!",
      "title": "Explosive Fireball",
       "entity_type": "palladium:custom_projectile",
       "inaccuracy": 1,
       "icon": "minecraft:fire_charge",
-      "velocity": 0.8,
+      "velocity": 1,
       "entity_data": {
        "Damage": 10,
-        "Gravity": 0.003,
+        "Gravity": 0.005,
         "Size": 0.5,
         "Lifetime": 1200,
         "DieOnEntityHit": false,
         "DieOnBlockHit": true,
-        "ExplosionRadius": 3,
+        "ExplosionRadius": 2,
         "ExplosionCausesFire": true,
         "ExplosionBlockInteraction": "destroy",
         "Appearances": [
@@ -628,20 +629,68 @@
 },
              {  
     "type": "palladium:experience_level_buyable",
-    "xp_level": 20,
+    "xp_level": 15,
     "flat_levels": true
       }
         ],
         "enabling": [
           {
     "type": "palladium:activation",
-    "cooldown": 3.60,
+    "cooldown": 360,
     "ticks": 1,
     "key_type": "key_bind",
     "needs_empty_hand": false
           }
         ]
       }
+    },
+
+
+         "fireball":{
+      "type": "palladium:command",
+       "hidden": false,
+       "hidden_in_bar": false,
+       "gui_position": [0, -4],
+      "description": "Throw Fireballs at all entites and players around you!",
+        "title": "Fire Zone",
+       "icon": "ut_au_power_mod:textures/icons/bluesoul.png",
+       "first_tick_commands": [],
+       "last_tick_commands": [],
+        "commands": [
+          "tag @s add fireballexclusion",
+          "execute as @a at @e[tag=!fireballexclusion,distance=..10] run summon minecraft:fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0]}",
+          "tag @s remove fireballexclusion"
+          
+    ],
+    "conditions":{
+          "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "big_flame_throw"
+},
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 20,
+    "flat_levels": true
+      }
+    ],
+      "enabling":[
+   {
+    "type": "palladium:activation",
+    "cooldown": 400,
+    "ticks": 1,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+   }
+        
+]
+    }
+    },
+
+    "e":{
+
     }
 
 

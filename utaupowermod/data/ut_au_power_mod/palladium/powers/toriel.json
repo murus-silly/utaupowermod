@@ -17,6 +17,135 @@
       "description": "Through the power of the Snail Book, you are able to use the magic of Toriel!"
       },
 
+              "goingbeyondmax": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:totem_of_undying",
+      "title": "Going Beyond Your Max",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0, 5],
+      "description": "You've gone beyond the limits of Toriel's power!",
+      "conditions": {
+        "unlocking":[
+          {
+    "type": "palladium:ability_unlocked",
+    "power": "ut_au_power_mod:toriel",
+    "ability": "toriel_health3"
+          },
+          {
+    "type": "palladium:ability_unlocked",
+    "ability": "toriel_attack3"
+          },
+          {
+    "type": "palladium:ability_unlocked",
+    "ability": "toriel_armour3"
+          },
+          {
+    "type": "palladium:ability_unlocked",
+    "ability": "toriel_speed3"
+          },
+          
+              {  
+    "type": "palladium:experience_level_buyable",
+    "xp_level": 45,
+    "flat_levels": true
+      }
+        ]
+        }
+      },
+
+        "toriel_health5": {
+        "type": "palladium:attribute_modifier",
+         "icon": "ut_au_power_mod:textures/icons/hearticon.png",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "title": "Increase Your Health",
+         "gui_position": [2,6],
+        "description": "Due to your training, your max health has increased!",
+        "attribute": "minecraft:generic.max_health",
+        "amount": 5,
+        "operation": 0,
+        "uuid": "c29afdac-af54-41a8-b172-fd7d8ebccbd4",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "goingbeyondmax"
+            }
+          ]
+        }
+       },
+
+       "toriel_attack4": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:wooden_sword",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "title": "Increase your Attack",
+         "gui_position": [1,6],
+        "description": "Due to your training, your attack has increased!",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 1.5,
+        "operation": 0,
+        "uuid": "472b5572-ca38-4c1f-a9c8-f0b859171613",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "goingbeyondmax"
+            }
+          ]
+        }
+       },
+
+       "toriel_armour4": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:leather_chestplate",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "title": "Increase your Armour",
+        "gui_position": [-2,6],
+        "description": "Due to your training, your armour has increased!",
+        "attribute": "minecraft:generic.armor",
+        "amount": 4.5,
+        "operation": 0,
+        "uuid": "ece531c1-85d4-4452-95f6-2d4c6d7160aa",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "goingbeyondmax"
+            }
+          ]
+        }
+       },
+
+        "toriel_speed4": {
+        "type": "palladium:attribute_modifier",
+          "icon": "minecraft:leather_boots",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "title": "Increase your Speed",
+        "gui_position": [-1,6],
+        "description": "Due to your training, your speed has increased!",
+        "attribute": "minecraft:generic.movement_speed",
+        "amount": 0.06,
+        "operation": 0,
+        "uuid": "e535eac8-0310-4779-8d9d-af0d28ed72fe",
+          "conditions": {
+          "unlocking": [
+            {
+           "type": "palladium:ability_unlocked",
+            "power": "ut_au_power_mod:toriel",
+            "ability": "goingbeyondmax"
+            }
+          ]
+        }
+       },
+
        "toriel_basis":{
     "type": "palladium:damage_immunity",
     "icon": "minecraft:potion",

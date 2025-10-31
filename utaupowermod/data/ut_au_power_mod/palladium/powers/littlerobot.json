@@ -17,7 +17,8 @@
         "commands": [
           "superpower remove ut_au_power_mod:all",
           "superpower add ut_au_power_mod:alphys @p",
-          "clear @p ut_au_power_mod:littlerobot 1"
+          "clear @p ut_au_power_mod:littlerobot 1",
+          "superpower add ut_au_power_mod:statattributes @p"
     ],
     "conditions":{
       "enabling":[
